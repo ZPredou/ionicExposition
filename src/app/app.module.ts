@@ -12,6 +12,7 @@ import { VisualHomePage } from '../pages/visual-home/visual-home'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Vibration } from '@ionic-native/vibration';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { Vibration } from '@ionic-native/vibration';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    YoutubeVideoPlayer
   ]
 })
 export class AppModule {}
