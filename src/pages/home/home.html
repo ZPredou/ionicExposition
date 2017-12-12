@@ -1,10 +1,20 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Accueil</ion-title>
+
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h1>Bienvenue dans la fabrique de l'Esprit!</h1>
-  <ion-buttons ion-button (click)='playVideo("E4S1yVBUPpk")'>Lancer la video</ion-buttons>
+<ion-content padding class="homeBack">
+  <!-- Real floating action button, fixed. It will not scroll with the content -->
+  <ion-fab top right edge>
+    <button ion-fab mini color="danger"><ion-icon name="heart"></ion-icon></button>
+    <ion-fab-list>
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+  <h1 style="color:white;">Bienvenue dans la fabrique de l'Esprit!</h1>
+  <ion-buttons ion-button color="danger" (click)="playVideo()"> Lancer la video</ion-buttons>
 </ion-content>

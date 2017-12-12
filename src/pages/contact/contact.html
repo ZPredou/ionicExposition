@@ -1,18 +1,26 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Contact
+    <ion-title style="color:white;">
+      <div style="color:white;">Contact</div>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
+    <ion-list-header>Follow us on :</ion-list-header>
+      <ion-item>
+        <ion-icon ios="logo-twitter" md="logo-twitter" item-start (click)="vibrate()"></ion-icon>
+        @LesAMIS
+      </ion-item>
+      <ion-item>
+        <ion-icon ios="logo-facebook" md="logo-facebook" item-start (click)="vibrate()"></ion-icon>
+        @LesAMIS
+      </ion-item>
+      <ion-item>
+        <ion-icon ios="logo-instagram" md="logo-instagram" item-start (click)="vibrate()"></ion-icon>
+        @LesAMIS
+      </ion-item>
   </ion-list>
 </ion-content>
