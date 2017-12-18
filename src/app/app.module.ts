@@ -12,6 +12,8 @@ import { VisualHomePage } from '../pages/visual-home/visual-home'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Vibration } from '@ionic-native/vibration';
+import { OneSignal } from '@ionic-native/onesignal';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { Vibration } from '@ionic-native/vibration';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    OneSignal,
+    BarcodeScanner
   ]
 })
 export class AppModule {}
