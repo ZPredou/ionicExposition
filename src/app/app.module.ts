@@ -38,6 +38,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     VisualHomePage
   ],
   providers: [
+    BarcodeScanner,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
