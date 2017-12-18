@@ -1,28 +1,35 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-import { Toast } from '@ionic-native/toast';
+import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
 
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html',
-    providers: [[Toast]]
 })
 export class AboutPage {
+  options: BarcodeScannerOptions;
+  results: {};
 
-  constructor(public navCtrl: NavController ,private barcodeScanner: BarcodeScanner ,private toast: Toast){
+  constructor(public navCtrl: NavController, private barcode: BarcodeScanner){
 
   }
 
-    public  getCode(){
-      this.barcodeScanner.scan().then((barcodeData) => {
-         // Success! Barcode data is here
-         console.log(barcodeData.text)
-      }, (err) => {
-         // An error occurred
-         this.toast.show(err, '5000', 'center').subscribe( toast => {
-            console.log(toast);
-         });
-      });
+  private scanBarcode() {
+
+    this.options = {
+      prompt: 'Scan a barcode to see the result :)'
     }
+    this.results = this.barcode.scan(this.options)
+      .then((result) => {
+        alert(
+          "We got a barcode\n" +
+          "Result: " + result.text + "\n" +
+          "Format: " + result.format + "\n" +
+          "Cancelled: " + result.cancelled
+        )
+      })
+      .catch((error) => {
+        alert(error);
+      })
   }
+}
