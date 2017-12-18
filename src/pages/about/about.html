@@ -2,9 +2,18 @@
   <ion-navbar>
     <ion-title>
       <div style="color:white;">About</div>
-
     </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content>
+    <ion-buttons type="button" ion-button color="danger" (click)="scanBarcode()"> QR code scanner</ion-buttons>
+    <ion-item>
+      <ion-icon ios="logo-twitter" md="logo-twitter" item-start (click)="scanBarcode()"></ion-icon>
+      @LesAMIS
+    </ion-item>
+    <div *ngIf="results">
+      <p>{{results.text}}</p>
+      <p>{{results.format}}</p>
+      <p>{{results.cancelled}}</p>
+    </div>
 </ion-content>
