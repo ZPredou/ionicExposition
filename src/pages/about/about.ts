@@ -1,25 +1,21 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html',
+  providers: [ BarcodeScanner ]
 })
 export class AboutPage {
   options: BarcodeScannerOptions;
   results: {};
 
-  constructor(public navCtrl: NavController, private barcode: BarcodeScanner){
+  constructor(public navCtrl: NavController, public barcode: BarcodeScanner) {
 
   }
-
-  private scanBarcode() {
-
-    this.options = {
-      prompt: 'Scan a barcode to see the result :)'
-    }
-    this.results = this.barcode.scan(this.options)
+  async scanBarcode() {
+    await this.barcode.scan()
       .then((result) => {
         alert(
           "We got a barcode\n" +
