@@ -43,7 +43,6 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     OneSignal,
-    BarcodeScanner
   ]
 })
 export class AppModule {}
