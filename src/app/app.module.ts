@@ -14,6 +14,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Vibration } from '@ionic-native/vibration';
 import { OneSignal } from '@ionic-native/onesignal';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { HeaderColor } from '@ionic-native/header-color';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     OneSignal,
+    HeaderColor,
   ]
 })
 export class AppModule {}

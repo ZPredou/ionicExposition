@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { HeaderColor } from '@ionic-native/header-color';
+
 
 @Component({
   selector: 'page-about',
@@ -10,8 +12,8 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 export class AboutPage {
   results: {};
 
-  constructor(public navCtrl: NavController, public barcode: BarcodeScanner) {
-
+  constructor(public navCtrl: NavController, public barcode: BarcodeScanner, public headerColor: HeaderColor) {
+    this.headerColor.tint('#becb29');
   }
   async scanBarcode() {
     await this.barcode.scan()
@@ -27,4 +29,5 @@ export class AboutPage {
         alert(error);
       })
   }
+
 }
