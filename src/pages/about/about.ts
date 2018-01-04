@@ -15,7 +15,7 @@ export class AboutPage {
   constructor(public navCtrl: NavController, public barcode: BarcodeScanner, public headerColor: HeaderColor) {
     this.headerColor.tint('#becb29');
   }
-  async scanBarcode() {
+  public async scanBarcode() {
     await this.barcode.scan()
       .then((result) => {
         alert(

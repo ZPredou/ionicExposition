@@ -7,7 +7,6 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { VisualHomePage } from '../pages/visual-home/visual-home'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,7 +22,6 @@ import { HeaderColor } from '@ionic-native/header-color';
     ContactPage,
     HomePage,
     TabsPage,
-    VisualHomePage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +34,6 @@ import { HeaderColor } from '@ionic-native/header-color';
     ContactPage,
     HomePage,
     TabsPage,
-    VisualHomePage
   ],
   providers: [
     BarcodeScanner,
