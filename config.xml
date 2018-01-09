@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Ionic_Exposition</name>
+    <name>Exposition FDE</name>
     <description>An awesome Ionic/Cordova app.</description>
     <allow-navigation href="*" />
     <content src="index.html" />
@@ -22,8 +22,11 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
-    <preference name="HeaderColor" value="#d34836" />
+    <preference name="HeaderColor" value="#f53d3d" />
     <preference name="statusBarBackgroundColor" value="red" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#f53d3d" />
+    <preference name="StatusBarStyle" value="lightcontent" />
     <platform name="android">
         <preference name="loadUrlTimeoutValue" value="700000" />
         <allow-intent href="market:*" />
@@ -94,4 +97,6 @@
     <plugin name="onesignal-cordova-plugin" spec="^2.2.4" />
     <plugin name="phonegap-plugin-barcodescanner" spec="~7.0.0" />
     <plugin name="cordova-plugin-headercolor" spec="^1.0.0" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
+    <allow-navigation href="http://10.0.1.27:8100" />
 </widget>
