@@ -23,6 +23,7 @@
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="HeaderColor" value="#d34836" />
+    <preference name="statusBarBackgroundColor" value="red" />
     <platform name="android">
         <preference name="loadUrlTimeoutValue" value="700000" />
         <allow-intent href="market:*" />

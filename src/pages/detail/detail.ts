@@ -20,10 +20,6 @@ export class DetailPage {
     this.image = this.navParams.get('contact').image;
     this.author = this.navParams.get('contact').author;
   }
-  goBack() {
-    console.log("popping");
-    this.nav.pop();
-  }
   private vibrate(){
     this.vibration.vibrate([30]);
   }
