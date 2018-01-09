@@ -4,7 +4,10 @@
     position: relative;
     text-align: center;
   }
-
+  img {
+    -webkit-filter: brightness(50%);
+    -moz-filter: brightness(50%);
+  }
   .card-title {
     border-top:3px solid white ;
     border-bottom: 3px solid white;

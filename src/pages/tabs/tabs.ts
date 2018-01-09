@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-
+import { Vibration } from '@ionic-native/vibration';
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
 
 @Component({
-  templateUrl: 'tabs.html'
+  templateUrl: 'tabs.html',
+  providers: [[Vibration]]
 })
 export class TabsPage {
 
@@ -13,7 +14,10 @@ export class TabsPage {
   tab2Root = AboutPage;
   tab3Root = ContactPage;
 
-  constructor() {
+  constructor(private vibration: Vibration) {
 
+  }
+  private vibrate(){
+    this.vibration.vibrate([30]);
   }
 }

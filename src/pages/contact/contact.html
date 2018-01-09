@@ -2,13 +2,13 @@
 <ion-header>
   <ion-navbar>
     <ion-title style="color:white;">
-      <div style="color:white;">Contact</div>
+      <div style="color:black;">Les œuvres</div>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="card-background-page ">
-    <ion-card (click)="goToDetail(contact)" *ngFor="let contact of contacts">
+    <ion-card (click)="goToDetail(contact); vibrate();" *ngFor="let contact of contacts">
       <img src={{contact.image}}/>
       <div class="card-title">{{contact.title}}</div>
       <div class="card-subtitle">{{contact.author}}</div>

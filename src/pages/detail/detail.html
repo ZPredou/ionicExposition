@@ -1,12 +1,30 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Detail</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-navbar>
 </ion-header>
-
-
-<ion-content padding>
-  <img src={{image}}/>
-  <div class="card-title">{{title}}</div>
-  <div class="card-subtitle">{{description}}</div>
+<ion-content class="cards-bg">
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Par {{author}}
+      </ion-card-title>
+      <p>{{description}}</p>
+    </ion-card-content>
+    <img src={{image}}/>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small (click)="vibrate();" color="danger" icon-start>
+          <ion-icon name='headset'></ion-icon>
+          Ecouter le guide
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear small (click)="vibrate();" color="danger" icon-start>
+          <ion-icon name='book'></ion-icon>
+          En savoir plus
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 </ion-content>
