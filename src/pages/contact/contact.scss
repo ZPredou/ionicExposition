@@ -6,6 +6,8 @@
   }
 
   .card-title {
+    border-top:3px solid white ;
+    border-bottom: 3px solid white;
     position: absolute;
     top: 36%;
     font-size: 2.0em;
@@ -17,7 +19,7 @@
   .card-subtitle {
     font-size: 1.0em;
     position: absolute;
-    top: 52%;
+    top: 58%;
     width: 100%;
     color: #fff;
   }

@@ -7,68 +7,10 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="card-background-page">
-    <ion-card (click)="goToDetail()">
-      <img src="assets/imgs/americathebeautiful.jpg"/>
-      <div class="card-title">America the beautiful</div>
-      <div class="card-subtitle">Jonathan Callan</div>
-    </ion-card>
-      <!--<ion-card-content>
-        <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-      </ion-card-content>-->
-    <ion-card>
-      <img src="assets/imgs/americathebeautiful.jpg"/>
-      <div class="card-title">America the beautiful</div>
-      <div class="card-subtitle">Jonathan Callan</div>
-    </ion-card>
-    <ion-card>
-      <img src="assets/imgs/americathebeautiful.jpg"/>
-      <div class="card-title">America the beautiful</div>
-      <div class="card-subtitle">Jonathan Callan</div>
-    </ion-card>
-    <ion-card>
-      <img src="assets/imgs/americathebeautiful.jpg"/>
-      <div class="card-title">America the beautiful</div>
-      <div class="card-subtitle">Jonathan Callan</div>
-    </ion-card>
-    <ion-card>
-      <img src="assets/imgs/americathebeautiful.jpg"/>
-      <div class="card-title">America the beautiful</div>
-      <div class="card-subtitle">Jonathan Callan</div>
-    </ion-card>
-    <ion-card>
-      <img src="assets/imgs/americathebeautiful.jpg"/>
-      <div class="card-title">America the beautiful</div>
-      <div class="card-subtitle">Jonathan Callan</div>
-    </ion-card>
-    <ion-card>
-      <img src="assets/imgs/americathebeautiful.jpg"/>
-      <div class="card-title">America the beautiful</div>
-      <div class="card-subtitle">Jonathan Callan</div>
-    </ion-card>
-    <ion-card>
-      <img src="assets/imgs/americathebeautiful.jpg"/>
-      <div class="card-title">America the beautiful</div>
-      <div class="card-subtitle">Jonathan Callan</div>
-    </ion-card>
-    <ion-card>
-      <img src="assets/imgs/americathebeautiful.jpg"/>
-      <div class="card-title">America the beautiful</div>
-      <div class="card-subtitle">Jonathan Callan</div>
-    </ion-card>
-    <ion-card>
-      <img src="assets/imgs/americathebeautiful.jpg"/>
-      <div class="card-title">America the beautiful</div>
-      <div class="card-subtitle">Jonathan Callan</div>
-    </ion-card>
-    <ion-card>
-      <img src="assets/imgs/americathebeautiful.jpg"/>
-      <div class="card-title">America the beautiful</div>
-      <div class="card-subtitle">Jonathan Callan</div>
-    </ion-card>
-    <ion-card>
-      <img src="assets/imgs/americathebeautiful.jpg"/>
-      <div class="card-title">America the beautiful</div>
-      <div class="card-subtitle">Jonathan Callan</div>
+<ion-content class="card-background-page ">
+    <ion-card (click)="goToDetail()" *ngFor="let contact of contacts">
+      <img src={{contact.image}}/>
+      <div class="card-title">{{contact.titre}}</div>
+      <div class="card-subtitle">{{contact.author}}</div>
     </ion-card>
 </ion-content>
