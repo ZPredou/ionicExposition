@@ -8,9 +8,9 @@
 </ion-header>
 
 <ion-content class="card-background-page ">
-    <ion-card (click)="goToDetail()" *ngFor="let contact of contacts">
+    <ion-card (click)="goToDetail(contact)" *ngFor="let contact of contacts">
       <img src={{contact.image}}/>
-      <div class="card-title">{{contact.titre}}</div>
+      <div class="card-title">{{contact.title}}</div>
       <div class="card-subtitle">{{contact.author}}</div>
     </ion-card>
 </ion-content>

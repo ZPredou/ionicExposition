@@ -15,25 +15,29 @@ export class ContactPage {
     this.nav = nav;
 
     this.contacts = [
-      { "id"   : 0,
-       "author": "Jonathan Callan",
-       "titre" : "AMERICA THE BEAUTIFUL",
-       "image" : "assets/imgs/americathebeautiful.jpg",
+      {"id"          : 0,
+       "author"      : "Jonathan Callan",
+       "title"       : "AMERICA THE BEAUTIFUL",
+       "image"       : "assets/imgs/americathebeautiful.jpg",
+       "description" : "UNE DESCRIPTION CHOISIE"
       },
-      { "id"   : 1,
+      {"id"    : 1,
        "author": "Lynette Yiadom-Boakye",
-       "titre" : "A QUARTER",
+       "title" : "A QUARTER",
        "image" : "assets/imgs/aQuarter.jpg",
+       "description" : "BLABLABLABLABLABLABLABLALBLBLAL"
       },
-      { "id"   : 2,
+      {"id"    : 2,
        "author": "James Casebere",
-       "titre" : "A BARREL VAULTED ROOM",
+       "title" : "A BARREL VAULTED ROOM",
        "image" : "assets/imgs/barrelVaultedRoom.jpg",
+       "description" : "BLABLABLABLABLABLABLABLALBLBLAL"
       },
-      { "id"   : 3,
+      {"id"    : 3,
        "author": "Claire Morgan",
-       "titre" : "A HANGING FOG",
+       "title" : "A HANGING FOG",
        "image" : "assets/imgs/hangingFog.jpg",
+       "description" : "BLABLABLABLABLABLABLABLALBLBLAL"
       },
     ];
   }
@@ -41,8 +45,8 @@ export class ContactPage {
     this.vibration.vibrate([0,300,100,50,100,50,100,50,100,50,100,50,100,50,150,150,150,450,100,50,100,50,150,150,150,450,100,50,100,50,150,150,150,450,150,150]);
   }
   private goToDetail(contact){
-    this.nav.push(DetailPage,{
-      param1: 'John', param2: 'Johnson'
+    this.nav.push(DetailPage , {
+      contact: contact
     });
   }
 }
