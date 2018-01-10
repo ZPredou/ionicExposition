@@ -99,4 +99,5 @@
     <plugin name="cordova-plugin-headercolor" spec="^1.0.0" />
     <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
     <allow-navigation href="http://10.0.1.27:8100" />
+    <allow-navigation href="http://10.0.1.27:8102" />
 </widget>

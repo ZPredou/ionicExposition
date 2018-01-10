@@ -14,7 +14,7 @@
     <img src={{image}}/>
     <ion-row no-padding>
       <ion-col>
-        <button ion-button clear small (click)="vibrate();" color="danger" icon-start>
+        <button ion-button clear small (click)="playAudio(); vibrate();" color="danger" icon-start>
           <ion-icon name='headset'></ion-icon>
           Ecouter le guide
         </button>
@@ -25,6 +25,14 @@
           En savoir plus
         </a>
       </ion-col>
+    </ion-row>
+    <ion-row>
+      <div *ngIf="soundMenu==true">
+        <audio controls>
+          <source src="assets/sounds/School-bell-sound-effect.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
     </ion-row>
   </ion-card>
 </ion-content>

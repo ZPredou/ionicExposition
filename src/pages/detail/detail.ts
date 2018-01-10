@@ -14,6 +14,7 @@ export class DetailPage {
   image:string;
   author:string;
   url:string;
+  soundMenu:boolean;
   constructor(public nav: NavController, public navParams: NavParams, private vibration: Vibration) {
     this.navParams   = navParams;
     this.title       = this.navParams.get('contact').title;
@@ -24,5 +25,14 @@ export class DetailPage {
   }
   private vibrate(){
     this.vibration.vibrate([30]);
+  }
+  playAudio(){
+    if(this.soundMenu)
+    {
+      this.soundMenu=false;
+    }
+    else{
+      this.soundMenu=true;
+    }
   }
 }
