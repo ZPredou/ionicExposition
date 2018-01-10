@@ -15,6 +15,7 @@ import { Vibration } from '@ionic-native/vibration';
 import { OneSignal } from '@ionic-native/onesignal';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { HeaderColor } from '@ionic-native/header-color';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { HeaderColor } from '@ionic-native/header-color';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     OneSignal,
     HeaderColor,
+    InAppBrowser
   ]
 })
 export class AppModule {}
