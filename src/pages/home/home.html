@@ -6,9 +6,10 @@
 
 <ion-content padding class="homeBack">
   <!-- Real floating action button, fixed. It will not scroll with the content -->
-  <ion-fab top right edge>
+  <ion-fab top right edge #fab1>
     <button ion-fab mini color="danger"><ion-icon name="heart"></ion-icon></button>
-    <ion-fab-list>
+    <ion-fab-list #fabList>
+      <div *ngIf="fabList.classList.contains('fab-list-active')" class="backdrop" (click)="fab1.close();"></div>
       <a button ion-fab href="http://www.facebook.com">
         <ion-icon name="logo-facebook"></ion-icon>
         <div class="label">Facebook</div>
@@ -24,7 +25,7 @@
     </ion-fab-list>
   </ion-fab>
   <blockquote>
-    <p>Bienvenue dans la fabrique de l'Esprit!</p>
+    <p class="title">La Fabrique de l'Esprit!</p>
     <p class="author">-by William Decourty    </p>
   </blockquote>
 </ion-content>

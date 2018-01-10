@@ -6,7 +6,14 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
-  <ion-item (click)="scanBarcode()">
-    <ion-buttons ion-button color="danger" ng-disable="false" (click)="scanBarcode()"> QR code scanner</ion-buttons>
-  </ion-item>
+  <blockquote>
+    <p>“N'acceptons aucune entrave à la liberté de créer, d'imaginer, d'apprendre, d'explorer !”</p>
+    <p class="author">- Roger-Maurice Bonnet</p>
+  </blockquote>
+  <ion-row>
+    <button ion-button center small color="danger" (click)="scanBarcode()" icon-start>
+      <ion-icon name='search'></ion-icon>
+      Cherchez les codes cachés !
+    </button>
+  </ion-row>
 </ion-content>
