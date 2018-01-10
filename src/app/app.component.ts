@@ -15,7 +15,6 @@ export class MyApp {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
       splashScreen.hide();
       this._OneSignal.startInit('b532d545-0594-4d4c-9f34-cc6e3daf1056', '337865225097');
       this._OneSignal.inFocusDisplaying(this._OneSignal.OSInFocusDisplayOption.Notification);
