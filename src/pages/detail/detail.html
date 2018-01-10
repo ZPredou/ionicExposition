@@ -20,7 +20,7 @@
         </button>
       </ion-col>
       <ion-col>
-        <a button ion-button clear small target="_system" href="{{url}}" onclick="window.open(this.href, '_blank', 'location=yes');return false;" (click)="vibrate();" color="danger" icon-start>
+        <a button ion-button clear small href="{{url}}" onclick="window.open(this.href, '_blank', 'location=yes', 'zoom=no');return false;" (click)="vibrate();" color="danger" icon-start>
           <ion-icon name='book'></ion-icon>
           En savoir plus
         </a>

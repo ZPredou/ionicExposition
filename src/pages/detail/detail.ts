@@ -17,6 +17,7 @@ export class DetailPage {
   url:string;
   sound:string;
   soundMenu:boolean;
+
   constructor(public nav: NavController, public navParams: NavParams, private iab: InAppBrowser, private vibration: Vibration) {
     this.navParams   = navParams;
     this.title       = this.navParams.get('contact').title;
