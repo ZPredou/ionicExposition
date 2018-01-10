@@ -20,7 +20,7 @@
         </button>
       </ion-col>
       <ion-col>
-        <a button ion-button clear small href="{{url}}" target="_blank" (click)="vibrate();" color="danger" icon-start>
+        <a button ion-button clear small target="_system" href="{{url}}" onclick="window.open(this.href, '_blank', 'location=yes');return false;" (click)="vibrate();" color="danger" icon-start>
           <ion-icon name='book'></ion-icon>
           En savoir plus
         </a>
@@ -29,7 +29,7 @@
     <ion-row>
       <div *ngIf="soundMenu==true">
         <audio controls>
-          <source src="assets/sounds/School-bell-sound-effect.mp3" type="audio/mpeg">
+          <source src="{{sound}}" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
       </div>
