@@ -101,4 +101,5 @@
     <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
     <allow-navigation href="http://10.0.1.27:8100" />
     <plugin name="cordova-plugin-inappbrowser" spec="^2.0.1" />
+    <allow-navigation href="http://10.0.1.188:8101" />
 </widget>
