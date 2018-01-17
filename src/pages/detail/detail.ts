@@ -20,10 +20,10 @@ export class DetailPage {
   soundMenu:boolean;
 
   sharingOptions: object = {
-    files: this.image,
     message: '@fondationfrances',
-    subject: 'Exposition du moment',
     url: this.url,
+    subject: 'Exposition du moment',
+
 
   };
 
@@ -48,14 +48,23 @@ export class DetailPage {
       this.soundMenu=true;
     }
   }
-  smsShare(){
-    this.socialSharing.shareViaSMS("shareViaSMS", "0688360209").then(() => {
-      console.log("shareViaSMS: Success");
+  twShare(){
+    this.socialSharing.shareViaTwitter("Parlez de l'exposition @FFrancesArt", null , this.url).then(() => {
+      console.log("shareViaTwitter: Success");
     }).catch(() => {
-      console.error("shareViaSMS: failed");
+      console.error("shareViaTwitter: failed");
+      console.log(this.image)
     });
   }
-  facebookShare() {
+  fbShare(){
+    this.socialSharing.shareViaFacebook("Parlez de l'exposition @fondationfrances", null , this.url).then(() => {
+      console.log("shareViaFacebook: Success");
+    }).catch(() => {
+      console.error("shareViaFacebook: failed");
+      console.log(this.image)
+    });
+  }
+  Share() {
     this.socialSharing.shareWithOptions(this.sharingOptions).then(() => {
       console.log("shareWithOptions: Success");
     }).catch(() => {
