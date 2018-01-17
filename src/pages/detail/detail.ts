@@ -20,10 +20,11 @@ export class DetailPage {
   soundMenu:boolean;
 
   sharingOptions: object = {
-    message: '@lafabriquedelesprit',
+    files: this.image,
+    message: '@fondationfrances',
     subject: 'Exposition du moment',
     url: this.url,
-    files: this.image
+
   };
 
   constructor(public nav: NavController, public navParams: NavParams, private iab: InAppBrowser, private vibration: Vibration, private socialSharing: SocialSharing) {
