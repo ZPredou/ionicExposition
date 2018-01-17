@@ -60,12 +60,6 @@ export class AboutPage {
   public async scanBarcode() {
     await this.barcode.scan()
       .then((result) => {
-        alert(
-          "We got a barcode\n" +
-          "Result: " + result.text + "\n" +
-          "Format: " + result.format + "\n" +
-          "Cancelled: " + result.cancelled
-        )
         for (var i = 0, len = this.contacts.length; i < len; i++) {
           if(result.text==this.contacts[i].id)
           {
