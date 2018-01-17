@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Vibration } from '@ionic-native/vibration';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @IonicPage()
 @Component({
@@ -18,7 +19,14 @@ export class DetailPage {
   sound:string;
   soundMenu:boolean;
 
-  constructor(public nav: NavController, public navParams: NavParams, private iab: InAppBrowser, private vibration: Vibration) {
+  sharingOptions: object = {
+    message: '@lafabriquedelesprit',
+    subject: 'Exposition du moment',
+    url: this.url,
+    files: this.image
+  };
+
+  constructor(public nav: NavController, public navParams: NavParams, private iab: InAppBrowser, private vibration: Vibration, private socialSharing: SocialSharing) {
     this.navParams   = navParams;
     this.title       = this.navParams.get('contact').title;
     this.description = this.navParams.get('contact').description;
@@ -38,5 +46,19 @@ export class DetailPage {
     else{
       this.soundMenu=true;
     }
+  }
+  smsShare(){
+    this.socialSharing.shareViaSMS("shareViaSMS", "0688360209").then(() => {
+      console.log("shareViaSMS: Success");
+    }).catch(() => {
+      console.error("shareViaSMS: failed");
+    });
+  }
+  facebookShare() {
+    this.socialSharing.shareWithOptions(this.sharingOptions).then(() => {
+      console.log("shareWithOptions: Success");
+    }).catch(() => {
+      console.error("shareWithOptions: failed");
+    });
   }
 }

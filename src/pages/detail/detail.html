@@ -34,5 +34,13 @@
         </audio>
       </div>
     </ion-row>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small (click)="facebookShare(); vibrate();" color="danger" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Partager l'oeuvre
+        </button>
+      </ion-col>
+    </ion-row>
   </ion-card>
 </ion-content>

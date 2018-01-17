@@ -16,6 +16,8 @@ import { OneSignal } from '@ionic-native/onesignal';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { HeaderColor } from '@ionic-native/header-color';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { SocialSharing } from '@ionic-native/social-sharing';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     OneSignal,
     HeaderColor,
-    InAppBrowser
+    InAppBrowser,
+    SocialSharing
   ]
 })
 export class AppModule {}
