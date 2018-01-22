@@ -30,7 +30,7 @@ $ ionic serve
 
 ## Contributing
 
-[Just contact me :)](https://github.com/ZPredou)
+[Just contact me :  ^)](https://github.com/ZPredou)
 
 
 ## Authors
