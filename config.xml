@@ -3,7 +3,7 @@
     <name>Ionic_Exposition</name>
     <description>An awesome Ionic/Cordova app.</description>
     <allow-navigation href="*" />
-    <content original-src="index.html" src="http://10.0.1.2:8100" />
+    <content src="index.html" />
     <content original-src="index.html" />
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
