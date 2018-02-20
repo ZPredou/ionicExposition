@@ -1,4 +1,4 @@
-# Ionic_Exposition
+# Ionic_Exposition // OLD TESTS //
 
 This Ionic application will be used as a base template to create interactive guides to the upcoming Art Exposition that 'll happen in the future
 
